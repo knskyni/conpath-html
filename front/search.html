@@ -4546,13 +4546,18 @@
                         <div class="d-flex flex-column-fluid">
                             <!--begin::Container-->
                             <div class="container">
-                                <div class="card card-custom gutter-b example example-compact">
+                                <div class="card card-custom card-collapse" data-card="true">
                                     <div class="card-header">
                                         <h3 class="card-title">検索条件</h3>
+                                        <div class="card-toolbar">
+											<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-1" data-card-tool="toggle">
+												<i class="ki ki-arrow-down icon-nm"></i>
+											</a>
+										</div>
                                     </div>
-                                    <!--begin::Form-->
-                                    <form>
-                                        <div class="card-body">
+
+                                    <div class="card-body" style="display: none; overflow: hidden; padding-top: 0px; padding-bottom: 0px;">
+                                        <form>
                                             <div class="form-group row">
                                                 <label for="example-week-input" class="col-2 col-form-label">年度</label>
                                                 <div class="col-2">
@@ -4689,15 +4694,14 @@
                                                 </div>
                                                 <span class="col-form-label">円 以上</span>
                                             </div>
-                                        </div>
-                                        <div class="card-footer">
                                             <div class="text-center">
-                                                <button type="reset" class="btn btn-secondary mr-3">戻る</button>
                                                 <button type="reset" class="btn btn-success ml-3">検索</button>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
+
+                                <hr>
 
                                 <div class="card card-custom gutter-b">
                                     <!--begin::Header-->
