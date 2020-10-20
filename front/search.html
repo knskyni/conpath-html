@@ -4557,36 +4557,35 @@
                                     </div>
 
                                     <div class="card-body" style="display: none; overflow: hidden; padding-top: 0px; padding-bottom: 0px;">
-                                        <form>
+                                        <form method="GET">
                                             <div class="form-group row">
                                                 <label for="example-week-input" class="col-2 col-form-label">年度</label>
                                                 <div class="col-2">
-                                                    <select class="form-control">
-                                                    <option>2020</option>
-                                                    <option>2019</option>
-                                                    <option>2018</option>
-                                                    <option>2017</option>
-                                                    <option>2016</option>
-                                                    <option>2015</option>
-                                                    <option>2014</option>
-                                                    <option>2013</option>
-                                                    <option></option>
+                                                    <select name="year" class="form-control">
+                                                        <option value="2020">2020</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2013">2013</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="example-search-input" class="col-2 col-form-label">企業名</label>
+                                                <label for="example-search-input" class="col-2 col-form-label">キーワード</label>
                                                 <div class="col-10">
-                                                    <input class="form-control" type="text" value="" id="example-search-input" />
+                                                    <input class="form-control" type="text" name="keyword" value="" id="example-search-input" />
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="example-week-input" class="col-2 col-form-label">留学生</label>
                                                 <div class="col-2">
-                                                    <select class="form-control">
-                                                    <option>受験可</option>
-                                                    <option>受験不可</option>
-                                                    <option></option>
+                                                    <select name="international_student" class="form-control">
+                                                        <option value="">指定なし</option>
+                                                        <option value="1">受験可</option>
+                                                        <option value="0">受験不可</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -4596,22 +4595,12 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <div class="input-group date" id="kt_datetimepicker_7_1" data-target-input="nearest">
-                                                                <input type="text" class="form-control datetimepicker-input" placeholder="開始日" data-target="#kt_datetimepicker_7_1" />
-                                                                <div class="input-group-append" data-target="#kt_datetimepicker_7_1" data-toggle="datetimepicker">
-                                                                    <span class="input-group-text">
-                                                                        <i class="ki ki-calendar"></i>
-                                                                    </span>
-                                                                </div>
+                                                                <input type="date" name="briefing_in_school_start" class="form-control datetimepicker-input" placeholder="開始日" />
                                                             </div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="input-group date" id="kt_datetimepicker_7_2" data-target-input="nearest">
-                                                                <input type="text" class="form-control datetimepicker-input" placeholder="終了日" data-target="#kt_datetimepicker_7_2" />
-                                                                <div class="input-group-append" data-target="#kt_datetimepicker_7_2" data-toggle="datetimepicker">
-                                                                    <span class="input-group-text">
-                                                                        <i class="ki ki-calendar"></i>
-                                                                    </span>
-                                                                </div>
+                                                                <input type="date" name="briefing_in_school_end" class="form-control datetimepicker-input" placeholder="終了日" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -4621,18 +4610,18 @@
                                                 <label for="example-week-input" class="col-2 col-form-label">業種</label>
                                                 <div class="col-4">
                                                     <select class="form-control">
-                                                    <option>農・林・漁業</option>
-                                                    <option>鉱業・建設・土木建設アービス</option>
-                                                    <option>製造業</option>
-                                                    <option>エネルギー供給・運送通信業</option>
-                                                    <option>旅行業</option>
-                                                    <option>卸売・小売行・飲食店</option>
-                                                    <option>金融・保険・不動産業</option>
-                                                    <option>情報サービス業</option>
-                                                    <option>医療・福祉</option>
-                                                    <option>教育</option>
-                                                    <option>その他サービス業</option>
-                                                    <option>その他</option>
+                                                        <option>農・林・漁業</option>
+                                                        <option>鉱業・建設・土木建設アービス</option>
+                                                        <option>製造業</option>
+                                                        <option>エネルギー供給・運送通信業</option>
+                                                        <option>旅行業</option>
+                                                        <option>卸売・小売行・飲食店</option>
+                                                        <option>金融・保険・不動産業</option>
+                                                        <option>情報サービス業</option>
+                                                        <option>医療・福祉</option>
+                                                        <option>教育</option>
+                                                        <option>その他サービス業</option>
+                                                        <option>その他</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -4640,13 +4629,13 @@
                                                 <label for="example-week-input" class="col-2 col-form-label">職種</label>
                                                 <div class="col-4">
                                                     <select class="form-control">
-                                                    <option>理学理学療法士</option>
-                                                    <option>作業療法士</option>
-                                                    <option>言語聴覚士</option>
-                                                    <option>事務系・医療事務</option>
-                                                    <option>事務系・医師事務作業補助者</option>
-                                                    <option>事務系・調剤事務</option>
-                                                    <option>事務系・診療情報管理職</option>
+                                                        <option>理学理学療法士</option>
+                                                        <option>作業療法士</option>
+                                                        <option>言語聴覚士</option>
+                                                        <option>事務系・医療事務</option>
+                                                        <option>事務系・医師事務作業補助者</option>
+                                                        <option>事務系・調剤事務</option>
+                                                        <option>事務系・診療情報管理職</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -4667,9 +4656,8 @@
                                                 <label for="example-week-input" class="col-2 col-form-label">寮</label>
                                                 <div class="col-2">
                                                     <select class="form-control">
-                                                    <option>有</option>
-                                                    <option>無</option>
-                                                    <option></option>
+                                                        <option>有</option>
+                                                        <option>無</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -4695,7 +4683,7 @@
                                                 <span class="col-form-label">円 以上</span>
                                             </div>
                                             <div class="text-center">
-                                                <button type="reset" class="btn btn-success ml-3">検索</button>
+                                                <button type="submit" class="btn btn-success ml-3">検索</button>
                                             </div>
                                         </form>
                                     </div>
