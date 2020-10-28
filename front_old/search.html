@@ -4549,14 +4549,9 @@
                                 <div class="card card-custom card-collapse" data-card="true">
                                     <div class="card-header">
                                         <h3 class="card-title">検索条件</h3>
-                                        <div class="card-toolbar">
-											<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-1" data-card-tool="toggle">
-												<i class="ki ki-arrow-down icon-nm"></i>
-											</a>
-										</div>
                                     </div>
 
-                                    <div class="card-body" style="display: none; overflow: hidden; padding-top: 0px; padding-bottom: 0px;">
+                                    <div class="card-body">
                                         <form method="GET">
                                             <div class="form-group row">
                                                 <label for="example-week-input" class="col-2 col-form-label">年度</label>
@@ -4579,6 +4574,14 @@
                                                     <input class="form-control" type="text" name="keyword" value="" id="example-search-input" />
                                                 </div>
                                             </div>
+                                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                詳細検索
+                                            </a>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-success ml-3">検索</button>
+                                            </div>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
                                             <div class="form-group row">
                                                 <label for="example-week-input" class="col-2 col-form-label">留学生</label>
                                                 <div class="col-2">
@@ -4686,6 +4689,8 @@
                                                 <button type="submit" class="btn btn-success ml-3">検索</button>
                                             </div>
                                         </form>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
 
